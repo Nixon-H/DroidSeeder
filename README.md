@@ -54,10 +54,16 @@ DroidSeeder/
 | Tool | Purpose | Install |
 |------|---------|---------|
 | `adb` | Android Debug Bridge | `sudo apt install adb` (or `brew install android-platform-tools`) |
-| `node` | Faker.js contact gen | `sudo apt install nodejs npm` |
+| `node` / `npm` | Contact gen (Node.js) | `sudo apt install nodejs npm` |
 | `curl` | Photo downloads | preinstalled on most systems |
 | `python3` | Rename + timestamp | preinstalled on most systems |
-| `@faker-js/faker` | Fake data library | `npm install @faker-js/faker` in repo dir |
+
+**JS dependency (one-time):**
+```bash
+npm install @faker-js/faker
+```
+
+**Python:** uses stdlib only (`subprocess`, `random`, `datetime`) — no pip packages needed.
 
 **Android device must have USB debugging enabled** and authorised.  
 Check with: `adb devices`
@@ -69,10 +75,10 @@ Check with: `adb devices`
 git clone https://github.com/Nixon-H/DroidSeeder.git
 cd DroidSeeder
 
-# 2. Install JS dependency
+# 2. Install the only dependency
 npm install @faker-js/faker
 
-# 3. Connect phone via USB (enable Developer Options → USB Debugging)
+# 3. Connect phone (enable Developer Options → USB Debugging)
 adb devices
 # Should show: <device_id>  device
 
