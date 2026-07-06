@@ -1,0 +1,5 @@
+.archive/
+contacts_fake.vcf
+fake-users.json
+img_*.jpg
+node_modules/
